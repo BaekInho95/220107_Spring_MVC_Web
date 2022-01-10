@@ -7,13 +7,13 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 
 public class IndexController implements Controller{
-
+	//http://.../WEB
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		System.out.println("index controller");
-		ModelAndView mv = new ModelAndView();
+		ModelAndView mv = new ModelAndView("index");
 		mv.addObject("data", "Hello Spring MVC~");
-		mv.setViewName("index.jsp");
+		//mv.setViewName("/WEB-INF/view/index.jsp");
 		return mv;
 	}
 
